@@ -313,6 +313,6 @@ def prepare_deployment_hiding_graph(encoder, secret_input, image_input):
     return encoded_image, residual
 
 def prepare_deployment_reveal_graph(decoder, image_input):
-    decoded_secret = decoded_secret = decoder(image_input)
+    decoded_secret = decoder(image_input)
 
     return tf.round(tf.sigmoid(decoded_secret))
